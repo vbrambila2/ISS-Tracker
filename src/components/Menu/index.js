@@ -1,5 +1,4 @@
 import './index.css';
-import PropTypes from 'prop-types';
 import React from 'react';
 //import { connect } from 'react-redux';
 //import { compose } from 'redux';
@@ -12,30 +11,31 @@ function Menu(props) {
     return (
         <nav className={isMenuOpen ? 'menuBar active' : 'menuBar'} > 
             <ul className="menuBarItems" >
-                <Button
+                <button
                     onClick={() => {
                         toggleMenu();
                         dispatchAction('/');
                     }}
                     className="homeButton">
                     Home
-                </Button>
-                <Button
+                </button>
+                <button
                      onClick={() => {
                         toggleMenu();
                         dispatchAction('/iss');
                     }}
                     className="satellitesButton">
                     Monitor ISS
-                </Button>  
+                </button>  
              </ul>
-         </nav> 
+        </nav> 
     )
 };
 
-Menu.propTypes = {
-    toggleMenu: PropTypes.func,
-    isMenuOpen: PropTypes.bool,
-};
+const mapStateToProps = state => {
+    return {
+
+    }
+}
 
 export default (Menu);

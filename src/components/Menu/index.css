@@ -22,25 +22,23 @@
 }
 .homeButton {
     box-shadow: 0px 3px 3px 2px darkgray;
+    padding: 1rem;
+    margin: 4.5rem 0 3rem 0;
 }
 .homeButton:hover {
     cursor: pointer;
-    background-color: #C4C4C4;
 }
 .satellitesButton {
     box-shadow: 0px 3px 3px 2px darkgray;
-    margin-top: 10px;
+    padding: 1rem;
 }
 .satellitesButton:hover {
     cursor: pointer;
-    background-color: #f5f5f5;
 }
 .menuBarItems {
     width: 100%; 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-
 }
 

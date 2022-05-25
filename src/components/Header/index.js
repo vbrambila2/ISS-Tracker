@@ -10,23 +10,27 @@ const useStyles = makeStyles(theme => {
       backgroundColor: '#C4C4C4',
       position: 'relative',
       width: '100vw',
-      //left: props => props.isMenuOpen ? 350 : 0,
-      //transition: '350ms',
       boxShadow: '0px 2px 4px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
       height: 70,
-      zIndex: '100'
+      zIndex: '100',
     },
     headerActive: {
-        left: 350,
+        left: 352,
         backgroundColor: '#C4C4C4',
         position: 'relative',
         width: '100vw',
-        //left: props => props.isMenuOpen ? 350 : 0,
-        //transition: '550ms',
         boxShadow: '0px 2px 4px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
         height: 70,
         zIndex: '100'
-    }
+    },
+    menuLogo: {
+      margin: '1rem 0 0 1rem',
+      backgroundColor: '#C4C4C4',
+      border: 'none',
+      '&:hover': {
+        cursor: 'pointer'
+      }
+    },
   });
 });
 
@@ -36,9 +40,11 @@ function Header(props) {
 
     return (
         <div className={ isMenuOpen ? classes.headerActive : classes.header }>
-            <Button onClick={() => toggleMenu()}>
+            <button 
+              className={classes.menuLogo}
+              onClick={() => toggleMenu()}>
                 <MenuLogo /> 
-            </Button>
+            </button>
         </div>
     );
 }
