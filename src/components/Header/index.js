@@ -56,9 +56,4 @@ function Header(props) {
     );
 }
 
-// Header.propTypes = {
-//   toggleMenu: PropTypes.func,
-//   isMenuOpen: PropTypes.bool,
-// };
-
 export default (Header);

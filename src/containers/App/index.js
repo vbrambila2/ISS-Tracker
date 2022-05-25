@@ -1,5 +1,5 @@
 import HomePage from '../HomePage';
-//import ISSPage from '../ISSPage/index.js';
+import ISSPage from '../ISSPage';
 import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
@@ -48,8 +48,8 @@ class App extends Component {
           <Header toggleMenu={() => this.ToggleSideMenu()} isMenuOpen={this.state.isMenuOpen} /> 
           
            <Routes>
-             <Route exact path="/" element={ <HomePage /> } /> 
-            {/* <Route exact path="/iss" render={(props) => <ISSPage isMenuOpen={this.state.isMenuOpen} />} />   */}
+                <Route exact path="/" element={ <HomePage /> } /> 
+                <Route exact path="/iss" element={ <ISSPage /> } />
             </Routes>
           </div>
         /* </HomeWrapper>
