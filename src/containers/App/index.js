@@ -1,8 +1,8 @@
-//import HomePage from '../HomePage/index.js';
+import HomePage from '../HomePage';
 //import ISSPage from '../ISSPage/index.js';
 import React, { Component } from 'react';
 //import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Menu from '../../components/Menu';
 import Header from '../../components/Header';
 //import styled from 'styled-components';
@@ -46,11 +46,11 @@ class App extends Component {
         {/* <HomeWrapper> */}
         
           <Header toggleMenu={() => this.ToggleSideMenu()} isMenuOpen={this.state.isMenuOpen} /> 
-           {/* <Switch > */}
-             {/* <Route exact path="/" render={(props) => <HomePage isMenuOpen={this.state.isMenuOpen} />} /> */}
-            {/* <Route exact path="/iss" render={(props) => <ISSPage isMenuOpen={this.state.isMenuOpen} />} />  */}
-           {/* </Switch>  */}
-          <div>Hello</div>
+          
+           <Routes>
+             <Route exact path="/" element={ <HomePage /> } /> 
+            {/* <Route exact path="/iss" render={(props) => <ISSPage isMenuOpen={this.state.isMenuOpen} />} />   */}
+            </Routes>
           </div>
         /* </HomeWrapper>
       </AppWrapper>  */
