@@ -4,9 +4,20 @@ import React from 'react';
 //import { compose } from 'redux';
 //import { push } from 'connected-react-router';
 import { Button } from '@material-ui/core';
+import { useNavigate } from "react-router-dom";
 
 function Menu(props) {
     const { toggleMenu, isMenuOpen, dispatchAction } = props;
+
+    let navigate = useNavigate(); 
+    const homeChange = () =>{ 
+        let path = '/'; 
+        navigate(path);
+    };
+    const issChange = () =>{ 
+        let path = '/iss'; 
+        navigate(path);
+    };
 
     return (
         <nav className={isMenuOpen ? 'menuBar active' : 'menuBar'} > 
@@ -14,7 +25,7 @@ function Menu(props) {
                 <button
                     onClick={() => {
                         toggleMenu();
-                        dispatchAction('/');
+                        homeChange();
                     }}
                     className="homeButton">
                     Home
@@ -22,7 +33,7 @@ function Menu(props) {
                 <button
                      onClick={() => {
                         toggleMenu();
-                        dispatchAction('/iss');
+                        issChange();
                     }}
                     className="satellitesButton">
                     Monitor ISS
