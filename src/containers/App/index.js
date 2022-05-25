@@ -3,10 +3,10 @@
 import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-//import Menu from '../../components/Menu/index.js';
+import Menu from '../../components/Menu';
 import Header from '../../components/Header';
 //import styled from 'styled-components';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // const AppWrapper = styled.div`
 //   display: flex;
@@ -41,9 +41,10 @@ class App extends Component {
   render() {
     return (
       //<AppWrapper>
-        /* <Menu toggleMenu={() => this.ToggleSideMenu()} isMenuOpen={this.state.isMenuOpen} /> */
-        //<HomeWrapper>
-        <div>
+      <div>
+        <Menu toggleMenu={() => this.ToggleSideMenu()} isMenuOpen={this.state.isMenuOpen} /> 
+        {/* <HomeWrapper> */}
+        
           <Header toggleMenu={() => this.ToggleSideMenu()} isMenuOpen={this.state.isMenuOpen} /> 
            {/* <Switch > */}
              {/* <Route exact path="/" render={(props) => <HomePage isMenuOpen={this.state.isMenuOpen} />} /> */}
@@ -57,9 +58,9 @@ class App extends Component {
   }
 };
 
-// App.propTypes = {
-//   ToggleSideMenu: PropTypes.func,
-//   isMenuOpen: PropTypes.bool,
-// };
+App.propTypes = {
+  ToggleSideMenu: PropTypes.func,
+  isMenuOpen: PropTypes.bool,
+};
 
 export default App;
