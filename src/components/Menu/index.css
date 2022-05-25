@@ -15,11 +15,10 @@
     left: -100%;
     transition: 550ms;
     box-shadow: 0px 3px 3px 3px darkgray;  
-    z-index: 1000;
 }
 .menuBar.active {
     left: 0;
-    transition: 350ms; 
+    transition: 1ms; 
 }
 .homeButton {
     box-shadow: 0px 3px 3px 2px darkgray;
