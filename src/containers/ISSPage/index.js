@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { makeStyles } from '@material-ui/core';
 //import { connect } from 'react-redux';
 //import { compose } from 'redux';
 //import MapContainer from '../../components/Map'
@@ -12,27 +13,35 @@ import React, { useEffect } from 'react';
 // } from './selectors';
 //import { INITIAL_PAGE } from './constants';
 
-const issStyles = {
-    locationContainer: {
-      position: 'absolute',
-      zIndex: 999,
-      margin: 30,
-      padding: 10,
-      backgroundColor: 'gray',
-      borderWidth: '2px',
-      borderStyle: 'solid',
-      borderColor: 'white',
-    },
-    locationTextContainer: {
-      padding: 5,
-      color: 'white',
-    },
-    map: {
-      padding: 0,
-      height: '100%',
-    }
-}
- 
+const useStyles = makeStyles(theme => {
+    return ({
+        issPage: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            margin: '3rem'
+        },
+        locationContainer: {
+            width: '30%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            backgroundColor: 'gray',
+            borderWidth: '1 rem',
+            borderStyle: 'solid',
+            borderColor: 'black',
+        },
+        locationTextContainer: {
+            margin: '1rem',
+            color: 'white',
+        },
+        map: {
+            padding: 0,
+            height: '100%',
+        }
+    });
+  });
+
 function ISSPage(props) {
   const { 
     loading,
@@ -41,6 +50,8 @@ function ISSPage(props) {
     dispatchLoadSatelliteLocation,
     dispatchLoadSatellitePeople,
   } = props;
+
+  const classes = useStyles(props);
 
 //   useEffect(() => {
 //     dispatchLoadSatelliteLocation(INITIAL_PAGE, null);
@@ -56,13 +67,13 @@ function ISSPage(props) {
   const peopleOnboard = people ? people.people : { name: 'Test' };
 
   return (
-    <div>
-        <section style={issStyles.locationContainer}>
-            <div style={issStyles.locationTextContainer}>Latitude: {issLocation.latitude}</div>
-            <div style={issStyles.locationTextContainer}>Longitude: {issLocation.longitude}</div>
+    <div className={classes.issPage} >
+        <section className={classes.locationContainer}>
+            <div className={classes.locationTextContainer}>Latitude: {issLocation.latitude}</div>
+            <div className={classes.locationTextContainer}>Longitude: {issLocation.longitude}</div>
             {/* <Astronauts people={peopleOnboard} /> */}
         </section>
-        <section style={issStyles.map}>
+        <section className={classes.map}>
             {/* <MapContainer location={issLocation} /> */}
         </section>
     </div>
