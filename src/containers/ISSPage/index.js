@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
+import axios from 'axios';
 //import { connect } from 'react-redux';
 //import { compose } from 'redux';
 //import MapContainer from '../../components/Map'
@@ -59,6 +60,19 @@ function ISSPage(props) {
 //     // eslint-disable-next-line
 //   }, []);
 
+    // let res = axios.get('http://api.open-notify.org/iss-now.json');
+    // let data = res.data;
+    // console.log(res);
+
+    axios.get('http://api.open-notify.org/iss-now.json')
+        .then(res => {
+            let data = res.data;
+            console.log(data);
+        })
+
+        
+
+
   if (loading && !location) {
     return <div>Loading...</div>; 
   }
@@ -69,7 +83,7 @@ function ISSPage(props) {
   return (
     <div className={classes.issPage} >
         <section className={classes.locationContainer}>
-            <div className={classes.locationTextContainer}>Latitude: {issLocation.latitude}</div>
+            <div className={classes.locationTextContainer}>Latitude: {}</div>
             <div className={classes.locationTextContainer}>Longitude: {issLocation.longitude}</div>
             {/* <Astronauts people={peopleOnboard} /> */}
         </section>
