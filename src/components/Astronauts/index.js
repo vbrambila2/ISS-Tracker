@@ -3,7 +3,12 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => {
     return ({
-        
+        astros: {
+            padding: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+        }
     });
   });
 
@@ -13,6 +18,8 @@ function Astronauts(props) {
     } = props;
   
     const classes = useStyles(props);
+
+    const astrosContainer = people.map(astro => <div key={astro.name}>- {astro.name}</div>)
     
   //console.log(people, "people")
   
@@ -24,11 +31,10 @@ function Astronauts(props) {
     //const peopleOnboard = people ? people.people : { name: 'Test' };
   
     return (
-      <div className={classes.issPage} >
-          {!people ? "loading..." : people.map((astro) =>
-            <li key={astro.name}>{astro.name}</li>
-        )}
-      </div>
+        <div className={classes.astros} >
+            <h2>Astronauts currently in space:</h2>
+            {!people ? "loading..." : astrosContainer }
+        </div>
     )
   }
   

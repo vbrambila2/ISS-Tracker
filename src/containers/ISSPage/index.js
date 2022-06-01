@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => {
             margin: '3rem'
         },
         locationContainer: {
-            width: '30%',
+            width: '20%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -27,10 +27,6 @@ const useStyles = makeStyles(theme => {
             margin: '1rem',
             color: 'white',
         },
-        map: {
-            padding: 0,
-            height: '100%',
-        }
     });
   });
 
@@ -60,17 +56,16 @@ console.log(people, "people");
   //const peopleOnboard = people ? people.people : { name: 'Test' };
 
   return (
-    <div className={classes.issPage} >
-        <section className={classes.locationContainer}>
-            <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
-            <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>
-            
-        </section>
-        <Astronauts people={people} />
-        <section className={classes.map}>
+        <div>
+            <div className={classes.issPage} >
+                <section className={classes.locationContainer}>
+                    <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
+                    <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>           
+                </section>
+                <Astronauts people={people} />
+            </div>
             <MapContainer location={location} />
-        </section>
-    </div>
+        </div>
   )
 }
   
