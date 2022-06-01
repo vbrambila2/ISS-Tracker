@@ -1,10 +1,11 @@
-import * as constants from './constants';
+import axios from 'axios';
+import * as constants from '../constants';
 
 export function getSatelliteLocation(location) {
-  return {
-    type: constants.GET_SATELLITE_LOCATION,
-    payload: location,
-  };
+    return {
+        type: constants.GET_SATELLITE_LOCATION,
+        payload: location,
+    };
 }
 
 export function getSatellitePeople(people) {
@@ -12,4 +13,17 @@ export function getSatellitePeople(people) {
       type: constants.GET_SATELLITE_PEOPLE,
       payload: people,
     };
-  }
+}
+
+export const getSatellite = () => {
+    return(dispatch) => {
+        axios.get('http://api.open-notify.org/iss-now.json')
+            .then(res => {
+                const location = res.data;
+                dispatch(getSatelliteLocation(location))
+            })
+            .catch(err => {
+                const errMsg = err.message;
+            })
+    }
+}

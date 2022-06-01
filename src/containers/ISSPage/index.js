@@ -1,18 +1,12 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
+import { connect } from 'react-redux';
 //import { connect } from 'react-redux';
 //import { compose } from 'redux';
 //import MapContainer from '../../components/Map'
 //import Astronauts from '../../components/Astronauts';
-//import { getSatelliteLocation, getSatellitePeople } from './actions';
-// import {
-//   makeSelectLoading,
-//   makeSelectPage,
-//   makeSelectSatelliteLocation,
-//   makeSelectSatellitePeople,
-// } from './selectors';
-//import { INITIAL_PAGE } from './constants';
+import { getSatellite } from '../../actions';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -45,46 +39,30 @@ const useStyles = makeStyles(theme => {
 
 function ISSPage(props) {
   const { 
-    loading,
     location,
-    people,
-    dispatchLoadSatelliteLocation,
-    dispatchLoadSatellitePeople,
+    getSatellite
   } = props;
 
   const classes = useStyles(props);
-
-//   useEffect(() => {
-//     dispatchLoadSatelliteLocation(INITIAL_PAGE, null);
-//     dispatchLoadSatellitePeople(INITIAL_PAGE, null);
-//     // eslint-disable-next-line
-//   }, []);
-
-    // let res = axios.get('http://api.open-notify.org/iss-now.json');
-    // let data = res.data;
-    // console.log(res);
-
-    axios.get('http://api.open-notify.org/iss-now.json')
-        .then(res => {
-            let data = res.data;
-            console.log(data);
-        })
-
+  
+  useEffect(() => {
+        getSatellite()
+  }, [getSatellite])
         
+console.log(location)
 
+//   if (loading && !location) {
+//     return <div>Loading...</div>; 
+//   }
 
-  if (loading && !location) {
-    return <div>Loading...</div>; 
-  }
-
-  const issLocation = location ? location.iss_position : { latitude:0, longitude:0 };
-  const peopleOnboard = people ? people.people : { name: 'Test' };
+  //const issLocation = location ? location.iss_position : { latitude:0, longitude:0 };
+  //const peopleOnboard = people ? people.people : { name: 'Test' };
 
   return (
     <div className={classes.issPage} >
         <section className={classes.locationContainer}>
-            <div className={classes.locationTextContainer}>Latitude: {}</div>
-            <div className={classes.locationTextContainer}>Longitude: {issLocation.longitude}</div>
+            <div className={classes.locationTextContainer}>Latitude: {location.latitude}</div>
+            <div className={classes.locationTextContainer}>Longitude: {location.longitude}</div>
             {/* <Astronauts people={peopleOnboard} /> */}
         </section>
         <section className={classes.map}>
@@ -94,29 +72,18 @@ function ISSPage(props) {
   )
 }
   
-// const mapStateToProps = createStructuredSelector({
-//     loading: makeSelectLoading(),
-//     page: makeSelectPage(),
-//     location: makeSelectSatelliteLocation(),
-//     people: makeSelectSatellitePeople(),
-// });
+const mapStateToProps = state => {
+    return {
+        location: state.issReducer.iss_position
+    }
+};
 
-// function mapDispatchToProps(dispatch) {
-//   let timer = null;
-//   return {
-//     dispatchLoadSatelliteLocation: () => {
-//       clearInterval(timer);
-//       timer = setInterval(() => dispatch(getSatelliteLocation("GET")), 1000);
-//     },
-//     dispatchLoadSatellitePeople: () => {
-//       dispatch(getSatellitePeople("GET"));
-//     },
-//   };
-// };
+const mapDispatchToProps = dispatch => {
+    return {
+        getSatellite: () => {
+            dispatch(getSatellite())
+        }
+    }
+}
 
-// const withConnect = connect(
-//   mapStateToProps,
-//   mapDispatchToProps,
-// );
-
-export default ISSPage;
+export default connect(mapStateToProps, mapDispatchToProps)(ISSPage);
