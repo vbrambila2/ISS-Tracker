@@ -7,11 +7,11 @@ import { getSatellite, getAstros } from '../../actions';
 
 const useStyles = makeStyles(theme => {
     return ({
-        issPage: {
+        infoSection: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            margin: '3rem'
+            marginBottom: '2rem',
         },
         locationContainer: {
             width: '20%',
@@ -44,25 +44,15 @@ function ISSPage(props) {
         getSatellite();
         getAstros();
     }, [])
-        
-console.log(location, "location");
-console.log(people, "people");
-
-//   if (loading && !location) {
-//     return <div>Loading...</div>; 
-//   }
-
-  //const issLocation = location ? location.iss_position : { latitude:0, longitude:0 };
-  //const peopleOnboard = people ? people.people : { name: 'Test' };
 
   return (
         <div>
-            <div className={classes.issPage} >
+            <div className={classes.infoSection} >
+                <Astronauts people={people} />
                 <section className={classes.locationContainer}>
                     <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
                     <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>           
                 </section>
-                <Astronauts people={people} />
             </div>
             <MapContainer location={location} />
         </div>

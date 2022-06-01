@@ -33,10 +33,10 @@ const useStyles = makeStyles(theme => {
         cursor: 'pointer'
       }
     },
-    currentPage: {
-      margin: '1rem',
-      fontSize: '2rem'
-    }
+    // currentPage: {
+    //   margin: '1rem',
+    //   fontSize: '2rem'
+    // }
   });
 });
 
@@ -51,7 +51,7 @@ function Header(props) {
               onClick={() => toggleMenu()}>
               <MenuLogo /> 
             </button>
-            <div className={classes.currentPage} >Home</div>
+            {/* <div className={classes.currentPage} >Home</div> */}
         </div>
     );
 }

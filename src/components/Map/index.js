@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
-  width: '100%',
-  height: '100%',
+    width: '100%',
+    height: '90%',
+    overflow: 'visible'
 };
 
 export class MapContainer extends Component {
@@ -21,19 +22,19 @@ export class MapContainer extends Component {
                 zoom={5}
                 style={mapStyles}
                 initialCenter={{
-                    lat: location.latitude,
-                    lng: location.longitude
+                    lat: location ? location.latitude : 0,
+                    lng: location ? location.longitude : 0
                 }}
                 center={{
-                    lat: location.latitude,
-                    lng: location.longitude
+                    lat: location ? location.latitude : 0,
+                    lng: location ? location.longitude : 0
                 }}
             >
                 <Marker
                     name={'ISS'}
                     position={{
-                        lat: location.latitude,
-                        lng: location.longitude
+                        lat: location ? location.latitude : 0,
+                        lng: location ? location.longitude : 0
                     }}
                     icon={{
                         url: 'https://icons.iconarchive.com/icons/goodstuff-no-nonsense/free-space/512/international-space-station-icon.png',

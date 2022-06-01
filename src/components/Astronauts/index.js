@@ -7,28 +7,19 @@ const useStyles = makeStyles(theme => {
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            fontSize: '1.5rem',
         }
     });
   });
 
 function Astronauts(props) {
     const { 
-      people,
+        people,
     } = props;
   
     const classes = useStyles(props);
-
-    const astrosContainer = people.map(astro => <div key={astro.name}>- {astro.name}</div>)
-    
-  //console.log(people, "people")
-  
-  //   if (loading && !location) {
-  //     return <div>Loading...</div>; 
-  //   }
-  
-    //const issLocation = location ? location.iss_position : { latitude:0, longitude:0 };
-    //const peopleOnboard = people ? people.people : { name: 'Test' };
+    const astrosContainer = people.map(astro => <div key={astro.name}>{astro.name}</div>)
   
     return (
         <div className={classes.astros} >
