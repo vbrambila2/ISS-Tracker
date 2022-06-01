@@ -82,9 +82,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
+    let timer = null;
     return {
         getSatellite: () => {
-            dispatch(getSatellite())
+            clearInterval(timer);
+            timer = setInterval(() => dispatch(getSatellite()), 10000);
         },
         getAstros: () => {
             dispatch(getAstros())
