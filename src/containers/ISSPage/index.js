@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
-import axios from 'axios';
 import { connect } from 'react-redux';
-//import { connect } from 'react-redux';
-//import { compose } from 'redux';
 //import MapContainer from '../../components/Map'
-//import Astronauts from '../../components/Astronauts';
-import { getSatellite } from '../../actions';
+import Astronauts from '../../components/Astronauts';
+import { getSatellite, getAstros } from '../../actions';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -40,16 +37,20 @@ const useStyles = makeStyles(theme => {
 function ISSPage(props) {
   const { 
     location,
-    getSatellite
+    people,
+    getSatellite,
+    getAstros
   } = props;
 
   const classes = useStyles(props);
   
-  useEffect(() => {
-        getSatellite()
-  }, [getSatellite])
+    useEffect(() => {
+        getSatellite();
+        getAstros();
+    }, [])
         
-console.log(location)
+console.log(location, "location");
+console.log(people, "people");
 
 //   if (loading && !location) {
 //     return <div>Loading...</div>; 
@@ -61,10 +62,11 @@ console.log(location)
   return (
     <div className={classes.issPage} >
         <section className={classes.locationContainer}>
-            <div className={classes.locationTextContainer}>Latitude: {location.latitude}</div>
-            <div className={classes.locationTextContainer}>Longitude: {location.longitude}</div>
-            {/* <Astronauts people={peopleOnboard} /> */}
+            <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
+            <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>
+            
         </section>
+        <Astronauts people={people} />
         <section className={classes.map}>
             {/* <MapContainer location={issLocation} /> */}
         </section>
@@ -74,7 +76,8 @@ console.log(location)
   
 const mapStateToProps = state => {
     return {
-        location: state.issReducer.iss_position
+        location: state.issReducer.iss_position,
+        people: state.peopleReducer.people
     }
 };
 
@@ -82,6 +85,9 @@ const mapDispatchToProps = dispatch => {
     return {
         getSatellite: () => {
             dispatch(getSatellite())
+        },
+        getAstros: () => {
+            dispatch(getAstros())
         }
     }
 }

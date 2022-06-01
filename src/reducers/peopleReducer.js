@@ -1,17 +1,17 @@
 import * as constants from '../constants';
 
 const initialState = {
-    location: undefined,
+    people: [],
 };
 
 /* eslint-disable default-case, no-param-reassign */
-const issReducer = (state = initialState, action) => {
+const peopleReducer = (state = initialState, action) => {
     switch(action.type) {
-        case constants.GET_SATELLITE_LOCATION:
+        case constants.GET_SATELLITE_PEOPLE:
             return action.payload
         default:
             return state
     }
 };
 
-export default issReducer;
+export default peopleReducer;

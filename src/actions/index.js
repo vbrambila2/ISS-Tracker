@@ -27,3 +27,16 @@ export const getSatellite = () => {
             })
     }
 }
+
+export const getAstros = () => {
+    return(dispatch) => {
+        axios.get('http://api.open-notify.org/astros.json')
+            .then(res => {
+                const people = res.data;
+                dispatch(getSatellitePeople(people))
+            })
+            .catch(err => {
+                const errMsg = err.message;
+            })
+    }
+}
