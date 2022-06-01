@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 import { connect } from 'react-redux';
-//import MapContainer from '../../components/Map'
+import MapContainer from '../../components/Map'
 import Astronauts from '../../components/Astronauts';
 import { getSatellite, getAstros } from '../../actions';
 
@@ -68,7 +68,7 @@ console.log(people, "people");
         </section>
         <Astronauts people={people} />
         <section className={classes.map}>
-            {/* <MapContainer location={issLocation} /> */}
+            <MapContainer location={location} />
         </section>
     </div>
   )
@@ -82,11 +82,13 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    let timer = null;
+    //let timer = null;
     return {
         getSatellite: () => {
-            clearInterval(timer);
-            timer = setInterval(() => dispatch(getSatellite()), 10000);
+            //uncomment two lines below to reset timer
+            // clearInterval(timer);
+            // timer = setInterval(() => dispatch(getSatellite()), 5000);
+            dispatch(getSatellite())
         },
         getAstros: () => {
             dispatch(getAstros())
