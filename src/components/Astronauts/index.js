@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
         }
     });
   });
