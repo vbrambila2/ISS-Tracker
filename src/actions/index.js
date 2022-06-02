@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as constants from '../constants';
+import { NASA_PHOTO_API_KEY } from '../constants';
 
 export function getSatelliteLocation(location) {
     return {
@@ -12,6 +13,13 @@ export function getSatellitePeople(people) {
     return {
       type: constants.GET_SATELLITE_PEOPLE,
       payload: people,
+    };
+}
+
+export function getNasaPhoto(photo) {
+    return {
+        type: constants.GET_NASA_PHOTO,
+        payload: photo
     };
 }
 
@@ -34,6 +42,19 @@ export const getAstros = () => {
             .then(res => {
                 const people = res.data;
                 dispatch(getSatellitePeople(people))
+            })
+            .catch(err => {
+                const errMsg = err.message;
+            })
+    }
+}
+
+export const getPhoto = () => {
+    return(dispatch) => {
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${NASA_PHOTO_API_KEY}`)
+            .then(res => {
+                const photo = res.data;
+                dispatch(getNasaPhoto(photo))
             })
             .catch(err => {
                 const errMsg = err.message;

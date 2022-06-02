@@ -36,7 +36,7 @@ function Menu(props) {
                         issChange();
                     }}
                     className="satellitesButton">
-                    Monitor ISS
+                    ISS Map
                 </button>  
              </ul>
         </nav> 
