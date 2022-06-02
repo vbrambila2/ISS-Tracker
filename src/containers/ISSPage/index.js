@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginBottom: '2rem',
+            marginBottom: '4rem',
         },
         locationContainer: {
             width: '20%',
