@@ -63,7 +63,7 @@ function HomePage(props) {
       <div className={classes.Home}>
         <h1 className={classes.appName}>International Space Station Tracker</h1>
         <p className={classes.appDescription}>Follow the ISS on it's journey around the globe. 
-          Get real time data on it's location, visibility, current astronauts on board and more!
+          Get real time data on it's current location and the astronauts on board!
         </p>
         <p className={classes.instructions}>To begin, open the menu and select ISS Map</p>
         <h2 className={classes.potd}>NASA Photo of the Day</h2>

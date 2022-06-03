@@ -7,25 +7,30 @@ import { getSatellite, getAstros } from '../../actions';
 
 const useStyles = makeStyles(theme => {
     return ({
+        issPage: {
+            backgroundColor: '#1a1a1a',
+            color: '#e6e6e6' 
+        },
         infoSection: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginBottom: '4rem',
+            paddingBottom: '2rem',
         },
         locationContainer: {
             width: '20%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: 'gray',
-            borderWidth: '1 rem',
+            backgroundColor: '#1a1a1a',
+            borderWidth: '0.3rem',
+            borderRadius: '1rem',
             borderStyle: 'solid',
-            borderColor: 'black',
+            borderColor: '#e6e6e6',
         },
         locationTextContainer: {
-            margin: '1rem',
-            color: 'white',
+            color: '#e6e6e6',
+            margin: '0.5rem' 
         },
     });
   });
@@ -46,10 +51,11 @@ function ISSPage(props) {
     }, [])
 
   return (
-        <div>
+        <div className={classes.issPage}>
             <div className={classes.infoSection} >
                 <Astronauts people={people} />
                 <section className={classes.locationContainer}>
+                    <h3 className={classes.locationTextContainer}>Current Location:</h3>
                     <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
                     <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>           
                 </section>
@@ -67,12 +73,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    //let timer = null;
+    let timer = null;
     return {
         getSatellite: () => {
             //lines below set the timer
-            // clearInterval(timer);
-            // timer = setInterval(() => dispatch(getSatellite()), 5000);
+            clearInterval(timer);
+            timer = setInterval(() => dispatch(getSatellite()), 5000);
             dispatch(getSatellite())
         },
         getAstros: () => {
