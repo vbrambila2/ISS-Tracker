@@ -5,7 +5,7 @@
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 .menuBar {
-    background-color: #d9d9d9;
+    background-color: #262626;
     width: 350px;
     height: 100vh;
     padding: 0px;
@@ -23,20 +23,20 @@
     transition: 1ms; 
 }
 .homeButton {
-    box-shadow: 0px 3px 3px 0px #666666;
     padding: 1rem;
     margin: 4.5rem 0 3rem 0;
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
     border: none;
+    color: #1a1a1a;
 }
 .homeButton:hover {
     cursor: pointer;
 }
 .satellitesButton {
-    box-shadow: 0px 3px 3px 0px #666666;
     padding: 1rem;
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
     border: none;
+    color: #1a1a1a;
 }
 .satellitesButton:hover {
     cursor: pointer;
