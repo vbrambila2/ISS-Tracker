@@ -2,9 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 .menuBar {
-    background-color: #E7E7E7;
+    background-color: #d9d9d9;
     width: 350px;
     height: 100vh;
     padding: 0px;
@@ -14,7 +15,7 @@
     top: 0;
     left: -100%;
     transition: 550ms;
-    box-shadow: 0px 3px 3px 3px darkgray; 
+    box-shadow: 0px 3px 3px 1px #666666; 
     z-index: 9999; 
 }
 .menuBar.active {
@@ -22,16 +23,20 @@
     transition: 1ms; 
 }
 .homeButton {
-    box-shadow: 0px 3px 3px 2px darkgray;
+    box-shadow: 0px 3px 3px 0px #666666;
     padding: 1rem;
     margin: 4.5rem 0 3rem 0;
+    background-color: #f2f2f2;
+    border: none;
 }
 .homeButton:hover {
     cursor: pointer;
 }
 .satellitesButton {
-    box-shadow: 0px 3px 3px 2px darkgray;
+    box-shadow: 0px 3px 3px 0px #666666;
     padding: 1rem;
+    background-color: #f2f2f2;
+    border: none;
 }
 .satellitesButton:hover {
     cursor: pointer;
