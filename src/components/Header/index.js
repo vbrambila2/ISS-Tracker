@@ -8,7 +8,6 @@ const useStyles = makeStyles(theme => {
       backgroundColor: '#d9d9d9',
       position: 'relative',
       width: '100vw',
-      boxShadow: '0px 2px 4px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
       height: 70,
       zIndex: '100',
       display: 'flex',
@@ -18,8 +17,8 @@ const useStyles = makeStyles(theme => {
         left: 352,
         backgroundColor: '#d9d9d9',
         position: 'relative',
-        width: '78vw',
-        boxShadow: '0px 2px 4px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
+        width: '81.7%',
+
         height: 70,
         zIndex: '100',
         display: 'flex',
