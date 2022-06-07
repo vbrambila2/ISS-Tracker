@@ -76,7 +76,7 @@ const mapDispatchToProps = dispatch => {
     let timer = null;
     return {
         getSatellite: () => {
-            //lines below set the timer
+            //the lines below set the timer
             clearInterval(timer);
             timer = setInterval(() => dispatch(getSatellite()), 5000);
             dispatch(getSatellite())
