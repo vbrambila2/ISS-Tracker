@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => {
       color: '#e6e6e6'
     },
     potd: {
-      marginTop: '5rem',
+      marginTop: '4rem',
       color: '#e6e6e6',
       textDecoration: 'underline'
     },
