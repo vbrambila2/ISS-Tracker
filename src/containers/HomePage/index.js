@@ -62,7 +62,7 @@ function HomePage(props) {
     return ( 
       <div className={classes.Home}>
         <h1 className={classes.appName}>International Space Station Tracker</h1>
-        <p className={classes.appDescription}>Follow the ISS on it's journey around the globe. 
+        <p className={classes.appDescription}>Follow the ISS on its journey around the globe. 
           Get real time data on it's current location and the astronauts on board
         </p>
         <p className={classes.instructions}>Open the menu and select ISS Map</p>
