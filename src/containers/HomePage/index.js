@@ -10,39 +10,39 @@ const useStyles = makeStyles(theme => {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        backgroundColor: '#1a1a1a'
+        //backgroundColor: '#1a1a1a'
     },
     appName: {
         margin: '4rem 0 2rem 0',
         fontSize: '3rem',
-        color: '#e6e6e6'
+        //color: '#e6e6e6'
     },
     appDescription: {
         fontSize: '1.5rem',
-        color: '#e6e6e6'
+        //color: '#e6e6e6'
     },
     instructions: {
       margin: '1rem',
-      color: '#e6e6e6'
+      //color: '#e6e6e6'
     },
     potd: {
       marginTop: '4rem',
-      color: '#e6e6e6',
+      //color: '#e6e6e6',
       textDecoration: 'underline'
     },
     photoTitle: {
       marginTop: '2rem',
-      color: '#e6e6e6'
+      //color: '#e6e6e6'
     },
     photoEx: {
       marginTop: '1rem',
       marginRight: '10rem',
       marginLeft: '10rem',
-      color: '#e6e6e6'
+      //color: '#e6e6e6'
     },
     photoDate: {
       margin: '1rem',
-      color: '#e6e6e6'
+      //color: '#e6e6e6'
     }
   });
 });
