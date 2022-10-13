@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => {
         //backgroundColor: '#1a1a1a'
     },
     appName: {
-        margin: '4rem 0 2rem 0',
+        margin: '3rem 0 3rem 0',
         fontSize: '3rem',
         //color: '#e6e6e6'
     },
@@ -32,16 +32,25 @@ const useStyles = makeStyles(theme => {
     },
     photoTitle: {
       marginTop: '2rem',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
       //color: '#e6e6e6'
     },
     photoEx: {
       marginTop: '1rem',
       marginRight: '10rem',
       marginLeft: '10rem',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
       //color: '#e6e6e6'
     },
     photoDate: {
       margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
       //color: '#e6e6e6'
     }
   });
@@ -67,9 +76,9 @@ function HomePage(props) {
         </p>
         <p className={classes.instructions}>Open the menu and select ISS Map</p>
         <h2 className={classes.potd}>NASA Photo of the Day</h2>
-        <div className={classes.photoTitle}>TITLE: {photo.title}</div>
-        <div className={classes.photoEx}>DESCRIPTION: {photo.explanation}</div>
-        <div className={classes.photoDate}>PHOTO DATE: {photo.date}</div>
+        <div className={classes.photoTitle}>TITLE: <div>{photo.title}</div></div>
+        <div className={classes.photoEx}>DESCRIPTION: <div>{photo.explanation}</div></div>
+        <div className={classes.photoDate}>PHOTO DATE: <div>{photo.date}</div></div>
         <NasaPhoto photo={photo.hdurl}/>
       </div>
     ); 
