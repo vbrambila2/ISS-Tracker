@@ -76,9 +76,9 @@ function HomePage(props) {
         </p>
         <p className={classes.instructions}>Open the menu and select ISS Map</p>
         <h2 className={classes.potd}>NASA Photo of the Day</h2>
-        <div className={classes.photoTitle}>TITLE: <div>{photo.title}</div></div>
-        <div className={classes.photoEx}>DESCRIPTION: <div>{photo.explanation}</div></div>
-        <div className={classes.photoDate}>PHOTO DATE: <div>{photo.date}</div></div>
+        <div className={classes.photoTitle}><h3>TITLE: </h3><div>{photo.title}</div></div>
+        <div className={classes.photoEx}><h3>DESCRIPTION: </h3><div>{photo.explanation}</div></div>
+        <div className={classes.photoDate}><h3>PHOTO DATE: </h3> <div>{photo.date}</div></div>
         <NasaPhoto photo={photo.hdurl}/>
       </div>
     ); 
