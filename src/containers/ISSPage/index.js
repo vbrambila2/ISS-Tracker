@@ -48,6 +48,8 @@ function ISSPage(props) {
     useEffect(() => {
         getSatellite();
         getAstros();
+        
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
   return (

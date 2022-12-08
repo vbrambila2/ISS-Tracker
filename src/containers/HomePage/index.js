@@ -66,6 +66,8 @@ function HomePage(props) {
 
   useEffect(() => {
     getPhoto()
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
     return ( 
