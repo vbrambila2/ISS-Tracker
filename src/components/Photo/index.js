@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => {
     return ({
-        
+        nasaPhoto: {
+            width: "100vw",
+        }
     });
   });
 
@@ -15,8 +17,8 @@ function NasaPhoto(props) {
     const classes = useStyles(props);
   
     return (
-        <div className={classes.nasaPhoto} >
-            <img src={photo} alt='Daily space provided by NASA' />
+        <div >
+            <img className={classes.nasaPhoto} src={photo} alt='Daily space provided by NASA' />
         </div>
     )
   }
