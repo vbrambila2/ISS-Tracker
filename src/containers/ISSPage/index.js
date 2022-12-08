@@ -40,7 +40,7 @@ function ISSPage(props) {
     location,
     people,
     getSatellite,
-    getAstros
+    getAstros,
   } = props;
 
   const classes = useStyles(props);

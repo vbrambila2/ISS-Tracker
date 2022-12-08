@@ -51,7 +51,6 @@ function Header(props) {
         onClick={() => toggleMenu()}>
         <MenuLogo /> 
       </button>
-      HOME
     </div>
   );
 }

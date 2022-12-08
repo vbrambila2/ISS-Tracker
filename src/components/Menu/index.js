@@ -1,13 +1,9 @@
 import './index.css';
 import React from 'react';
-//import { connect } from 'react-redux';
-//import { compose } from 'redux';
-//import { push } from 'connected-react-router';
-import { Button } from '@material-ui/core';
 import { useNavigate } from "react-router-dom";
 
 function Menu(props) {
-    const { toggleMenu, isMenuOpen, dispatchAction } = props;
+    const { toggleMenu, isMenuOpen } = props;
 
     let navigate = useNavigate(); 
     const homeChange = () =>{ 
@@ -42,11 +38,5 @@ function Menu(props) {
         </nav> 
     )
 };
-
-const mapStateToProps = state => {
-    return {
-
-    }
-}
 
 export default (Menu);

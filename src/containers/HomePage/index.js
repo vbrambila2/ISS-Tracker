@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => {
 function HomePage(props) { 
   const {
     photo,
-    getPhoto
+    getPhoto,
   } = props;
 
   const classes = useStyles(props);
