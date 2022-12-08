@@ -6,6 +6,7 @@ const useStyles = makeStyles(theme => {
   return ({
     header: {
       backgroundColor: '#d9d9d9',
+      boxShadow: '0rem 0rem 0rem 0.05rem #666666',
       position: 'relative',
       width: '100vw',
       height: 70,
@@ -16,6 +17,7 @@ const useStyles = makeStyles(theme => {
     headerActive: {
         left: 352,
         backgroundColor: '#d9d9d9',
+        boxShadow: '0rem 0rem 0rem 0.05rem #666666',
         position: 'relative',
         width: '81.7%',
 
