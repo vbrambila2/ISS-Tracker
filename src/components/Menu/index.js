@@ -15,7 +15,7 @@ function Menu(props) {
         navigate(path);
     };
     const aboutChange = () =>{ 
-        let path = '/iss'; 
+        let path = '/about'; 
         navigate(path);
     };
 

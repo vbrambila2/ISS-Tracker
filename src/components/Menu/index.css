@@ -34,11 +34,21 @@
 }
 .satellitesButton {
     padding: 1rem;
+    margin: 0 0 3rem 0;
     background-color: #e6e6e6;
     border: none;
     color: #1a1a1a;
 }
 .satellitesButton:hover {
+    cursor: pointer;
+}
+.aboutButton {
+    padding: 1rem;
+    background-color: #e6e6e6;
+    border: none;
+    color: #1a1a1a;
+}
+.aboutButton:hover {
     cursor: pointer;
 }
 .menuBarItems {
