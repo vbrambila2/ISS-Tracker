@@ -8,8 +8,8 @@ import { getSatellite, getAstros } from '../../actions';
 const useStyles = makeStyles(theme => {
     return ({
         issPage: {
-            backgroundColor: '#1a1a1a',
-            color: '#e6e6e6' 
+            //backgroundColor: '#1a1a1a',
+            //color: '#e6e6e6' 
         },
         infoSection: {
             display: 'flex',
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => {
             flexDirection: 'column',
             alignItems: 'center',
             backgroundColor: '#1a1a1a',
-            borderWidth: '0.3rem',
+            //borderWidth: '0.3rem',
             borderRadius: '1rem',
-            borderStyle: 'solid',
-            borderColor: '#e6e6e6',
+            //borderStyle: 'solid',
+            //borderColor: '#e6e6e6',
         },
         locationTextContainer: {
             color: '#e6e6e6',

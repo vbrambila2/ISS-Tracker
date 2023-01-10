@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => {
       //color: '#e6e6e6'
     },
     potd: {
-      marginTop: '4rem',
+      marginTop: '3rem',
       //color: '#e6e6e6',
       textDecoration: 'underline'
     },
@@ -74,9 +74,9 @@ function HomePage(props) {
       <div className={classes.Home}>
         <h1 className={classes.appName}>International Space Station Tracker</h1>
         <p className={classes.appDescription}>Follow the ISS on its journey around the globe. 
-          Get real time data on it's current location and the astronauts on board
+          Get real time data on it's current location and the astronauts on board.
         </p>
-        <p className={classes.instructions}>Open the menu and select ISS Map</p>
+        <p className={classes.instructions}>- Open the menu and select ISS Map -</p>
         <h2 className={classes.potd}>NASA Photo of the Day</h2>
         <div className={classes.photoTitle}><h3>TITLE: </h3><div>{photo.title}</div></div>
         <div className={classes.photoEx}><h3>DESCRIPTION: </h3><div>{photo.explanation}</div></div>
