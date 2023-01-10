@@ -14,6 +14,10 @@ function Menu(props) {
         let path = '/iss'; 
         navigate(path);
     };
+    const aboutChange = () =>{ 
+        let path = '/iss'; 
+        navigate(path);
+    };
 
     return (
         <nav className={isMenuOpen ? 'menuBar active' : 'menuBar'} > 
@@ -33,6 +37,14 @@ function Menu(props) {
                     }}
                     className="satellitesButton">
                     ISS Map
+                </button>  
+                <button
+                     onClick={() => {
+                        toggleMenu();
+                        aboutChange();
+                    }}
+                    className="aboutButton">
+                    About
                 </button>  
              </ul>
         </nav> 
