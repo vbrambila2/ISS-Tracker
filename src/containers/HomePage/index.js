@@ -7,19 +7,19 @@ import NasaPhoto from '../../components/Photo';
 const useStyles = makeStyles(theme => {
   return ({
     Home: {
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        //backgroundColor: '#1a1a1a'
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
+      //backgroundColor: '#1a1a1a'
     },
     appName: {
-        margin: '3rem 0 3rem 0',
-        fontSize: '3rem',
-        //color: '#e6e6e6'
+      margin: '3rem 0 3rem 0',
+      fontSize: '3rem',
+      //color: '#e6e6e6'
     },
     appDescription: {
-        fontSize: '1.5rem',
-        //color: '#e6e6e6'
+      fontSize: '1.5rem',
+      //color: '#e6e6e6'
     },
     instructions: {
       margin: '1rem',

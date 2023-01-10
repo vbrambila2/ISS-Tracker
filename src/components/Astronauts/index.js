@@ -23,7 +23,7 @@ function Astronauts(props) {
   
     return (
         <div className={classes.astros} >
-            <h2 style={{ textDecoration: 'underline' }}>Astronauts currently aboard the ISS:</h2>
+            <h2>Astronauts currently aboard the ISS:</h2>
             {!people ? "loading..." : astrosContainer }
         </div>
     )
