@@ -1,5 +1,6 @@
 import HomePage from '../HomePage';
 import ISSPage from '../ISSPage';
+import About from '../About';
 import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
@@ -27,6 +28,7 @@ class App extends Component {
             <Routes>
                 <Route exact path="/" element={ <HomePage /> } /> 
                 <Route exact path="/iss" element={ <ISSPage /> } />
+                <Route exact path="/about" element={ <About /> } />
             </Routes>
         </div>
     );
