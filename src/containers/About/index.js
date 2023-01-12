@@ -10,10 +10,17 @@ const useStyles = makeStyles(theme => {
         },
         aboutTitle: {
             margin: '3rem 0 3rem 0',
-            fontSize: '2.5rem',
+            fontSize: '2.7rem',
         },
         aboutParagraph: {
             width: '75%',
+        },
+        faq: {
+             margin: '2rem 2rem 0 15rem'
+        },
+        faqTitle: {
+            margin: '2rem 0 2rem 0',
+            fontSize: '2rem',
         }
     });
   });
@@ -22,20 +29,27 @@ function About(props) {
     const classes = useStyles(props);
 
     return (
-        <div className={classes.About}>
-            <section className={classes.aboutTitle}>About the ISS</section>
-            <p className={classes.aboutParagraph}>The International Space Station is a 
-                large spacecraft in orbit around Earth. It serves as a home where crews
-                 of astronauts and cosmonauts live. The space station is also a unique 
-                 science laboratory. Several nations worked together to build and use 
-                 the space station. The space station is made of parts that were 
-                 assembled in space by astronauts. It orbits Earth at an average 
-                 altitude of approximately 250 miles. It travels at 17,500 mph. This 
-                 means it orbits Earth every 90 minutes. NASA is using the space 
-                 station to learn more about living and working in space. These 
-                 lessons will make it possible to send humans farther into space than 
-                 ever before.
-            </p>
+        <div>
+            <div className={classes.About}>
+                <section className={classes.aboutTitle}>About the ISS</section>
+                <p className={classes.aboutParagraph}>The International Space Station is a 
+                    large spacecraft in orbit around Earth. It serves as a home where crews
+                    of astronauts and cosmonauts live. The space station is also a unique 
+                    science laboratory. Several nations worked together to build and use 
+                    the space station. The space station is made of parts that were 
+                    assembled in space by astronauts. It orbits Earth at an average 
+                    altitude of approximately 250 miles. It travels at 17,500 mph. This 
+                    means it orbits Earth every 90 minutes. NASA is using the space 
+                    station to learn more about living and working in space. These 
+                    lessons will make it possible to send humans farther into space than 
+                    ever before.
+                </p>
+            </div>
+            <div className={classes.faq}>
+                <section>
+                    <div className={classes.faqTitle}>Frequently asked questions</div>
+                </section>
+            </div>
         </div>
     )
 }
