@@ -24,15 +24,17 @@ function About(props) {
     return (
         <div className={classes.About}>
             <section className={classes.aboutTitle}>About the ISS</section>
-            <p className={classes.aboutParagraph}>The space station is Earth's only 
-                microgravity laboratory. This football field-sized platform hosts
-                a plethora of science and technology experiments that are continuously
-                being conducted by crew members, or are automated. Research aboard 
-                the orbiting laboratory holds benefits for life back on Earth, 
-                as well as for future space exploration. The space station serves 
-                as a testbed for technologies and allows us to study the impacts 
-                of long-term spaceflight to humans, supporting NASA's mission to push 
-                human presence farther into space.
+            <p className={classes.aboutParagraph}>The International Space Station is a 
+                large spacecraft in orbit around Earth. It serves as a home where crews
+                 of astronauts and cosmonauts live. The space station is also a unique 
+                 science laboratory. Several nations worked together to build and use 
+                 the space station. The space station is made of parts that were 
+                 assembled in space by astronauts. It orbits Earth at an average 
+                 altitude of approximately 250 miles. It travels at 17,500 mph. This 
+                 means it orbits Earth every 90 minutes. NASA is using the space 
+                 station to learn more about living and working in space. These 
+                 lessons will make it possible to send humans farther into space than 
+                 ever before.
             </p>
         </div>
     )
