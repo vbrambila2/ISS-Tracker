@@ -80,7 +80,7 @@ function HomePage(props) {
         <h2 className={classes.potd}>NASA Photo of the Day</h2>
         <div className={classes.photoTitle}><h3>TITLE: </h3><div>{photo.title}</div></div>
         <div className={classes.photoEx}><h3>DESCRIPTION: </h3><div>{photo.explanation}</div></div>
-        <div className={classes.photoDate}><h3>PHOTO DATE: </h3> <div>{photo.date}</div></div>
+        <div className={classes.photoDate}><h3>DATE: </h3> <div>{photo.date}</div></div>
         <NasaPhoto photo={photo.hdurl}/>
       </div>
     ); 
