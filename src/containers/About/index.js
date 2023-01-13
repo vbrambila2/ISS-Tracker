@@ -21,6 +21,15 @@ const useStyles = makeStyles(theme => {
         faqTitle: {
             margin: '2rem 0 2rem 0',
             fontSize: '2rem',
+        },
+        faqQuestion: {
+            margin: '2rem 15rem 2rem 0',
+            padding: '0.8rem',
+            background: '#e6e6e6',
+            borderStyle: 'solid',
+            borderColor: '#b6b6b6',
+            borderRadius: '0.3rem',
+            borderWidth: '0.1rem'
         }
     });
   });
@@ -48,6 +57,9 @@ function About(props) {
             <div className={classes.faq}>
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
+                    <div className={classes.faqQuestion}>Why is the space station up there?</div>
+                    <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
+                    <div className={classes.faqQuestion}>Do I need a telescope to see the space station?</div>
                 </section>
             </div>
         </div>
