@@ -30,6 +30,13 @@ const useStyles = makeStyles(theme => {
             borderColor: '#b6b6b6',
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
+        },
+        faqQuestionAnswer: {
+            padding: '0.8rem',
+            borderStyle: 'solid',
+            borderColor: '#b6b6b6',
+            borderRadius: '0.3rem',
+            borderWidth: '0.1rem'
         }
     });
   });
@@ -58,8 +65,11 @@ function About(props) {
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
                     <div className={classes.faqQuestion}>Why is the space station up there?</div>
+                    <p className={classes.faqQuestionAnswer}>answer</p>
                     <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
+                    <p className={classes.faqQuestionAnswer}>answer</p>
                     <div className={classes.faqQuestion}>Do I need a telescope to see the space station?</div>
+                    <p className={classes.faqQuestionAnswer}>answer</p>
                 </section>
             </div>
         </div>
