@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => {
             fontSize: '2rem',
         },
         faqQuestion: {
-            margin: '2rem 15rem 2rem 0',
+            margin: '0.5rem 15rem 0.5rem 0',
             padding: '0.8rem',
             background: '#e6e6e6',
             borderStyle: 'solid',
