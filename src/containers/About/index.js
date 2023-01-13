@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => {
             borderWidth: '0.1rem'
         },
         faqQuestionAnswer: {
+            display: "none",
             padding: '0.8rem',
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
@@ -43,6 +44,10 @@ const useStyles = makeStyles(theme => {
 
 function About(props) {
     const classes = useStyles(props);
+
+    const showAnswer = () => {
+        document.getElementById('1').style.display = "block";
+    }
 
     return (
         <div>
@@ -64,8 +69,8 @@ function About(props) {
             <div className={classes.faq}>
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
-                    <div className={classes.faqQuestion}>Why is the space station up there?</div>
-                    <p className={classes.faqQuestionAnswer}>answer</p>
+                    <div className={classes.faqQuestion} onClick={() => showAnswer()}>Why is the space station up there?</div>
+                    <p className={classes.faqQuestionAnswer} id="1">answer</p>
                     <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
                     <p className={classes.faqQuestionAnswer}>answer</p>
                     <div className={classes.faqQuestion}>Do I need a telescope to see the space station?</div>
