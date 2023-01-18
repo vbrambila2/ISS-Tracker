@@ -31,6 +31,9 @@ const useStyles = makeStyles(theme => {
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
         },
+        "&:active": {
+            background: "#h8d9f7"
+        },
         faqQuestionAnswer: {
             display: "none",
             padding: '0.8rem',
@@ -44,10 +47,13 @@ const useStyles = makeStyles(theme => {
 
 function About(props) {
     const classes = useStyles(props);
+    const { toggleFaq, isFaqOpen } = props;
 
-    const showAnswer = () => {
-        document.getElementById('1').style.display = "block";
-    }
+    // const showAnswer = () => {
+    //     let visible = false;
+
+    //     //document.getElementById('1').style.display = "block";
+    // }
 
     return (
         <div>
@@ -69,7 +75,7 @@ function About(props) {
             <div className={classes.faq}>
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
-                    <div className={classes.faqQuestion} onClick={() => showAnswer()}>Why is the space station up there?</div>
+                    <div className={isFaqOpen ? classes.faqQuestion : classes.faqQuestionActive} onClick={() => toggleFaq()}>Why is the space station up there?</div>
                     <p className={classes.faqQuestionAnswer} id="1">answer</p>
                     <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
                     <p className={classes.faqQuestionAnswer}>answer</p>
