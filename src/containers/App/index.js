@@ -11,13 +11,19 @@ class App extends Component {
   constructor(props){
     super(props);
     this.ToggleSideMenu = this.ToggleSideMenu.bind(this);
+    this.ToggleFaqQuestions = this.ToggleFaqQuestions.bind(this);
     this.state = {
       isMenuOpen: false,
+      isFaqOpen: false
     }
   };
 
   ToggleSideMenu() {
     this.setState({ isMenuOpen: !this.state.isMenuOpen })
+  };
+
+  ToggleFaqQuestions() {
+    this.setState({ isFaqOpen: !this.state.isFaqOpen })
   }
 
   render() {
@@ -28,7 +34,7 @@ class App extends Component {
             <Routes>
                 <Route exact path="/" element={ <HomePage /> } /> 
                 <Route exact path="/iss" element={ <ISSPage /> } />
-                <Route exact path="/about" element={ <About /> } />
+                <Route exact path="/about" element={ <About toggleFaq={() => this.ToggleFaqQuestions()} isFaqOpen={this.state.isFaqOpen} /> } />
             </Routes>
         </div>
     );
