@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme => {
         },
         faqQuestionAnswer: {
             display: "none",
+            margin: '0.5rem 15rem 0.5rem 0',
             padding: '0.8rem',
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
@@ -40,10 +41,10 @@ const useStyles = makeStyles(theme => {
             borderWidth: '0.1rem'
         },
         faqQuestionAnswerActive: {
-            //display: "none",
+            margin: '0.5rem 15rem 0.5rem 0',
             padding: '0.8rem',
             borderStyle: 'solid',
-            borderColor: '#000000',
+            borderColor: '#b6b6b6',
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
         }
