@@ -82,10 +82,10 @@ function About(props) {
                     <div className={classes.faqTitle}>Frequently asked questions</div>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq()}>Why is the space station up there?</div>
                     <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1">answer</p>
-                    <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
-                    <p className={classes.faqQuestionAnswer}>answer</p>
-                    <div className={classes.faqQuestion}>Do I need a telescope to see the space station?</div>
-                    <p className={classes.faqQuestionAnswer}>answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>How often can I expect to see the space station?</div>
+                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer}>answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>Do I need a telescope to see the space station?</div>
+                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer}>answer</p>
                 </section>
             </div>
         </div>
