@@ -31,14 +31,19 @@ const useStyles = makeStyles(theme => {
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
         },
-        "&:active": {
-            background: "#h8d9f7"
-        },
         faqQuestionAnswer: {
             display: "none",
             padding: '0.8rem',
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
+            borderRadius: '0.3rem',
+            borderWidth: '0.1rem'
+        },
+        faqQuestionAnswerActive: {
+            //display: "none",
+            padding: '0.8rem',
+            borderStyle: 'solid',
+            borderColor: '#000000',
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
         }
@@ -75,8 +80,8 @@ function About(props) {
             <div className={classes.faq}>
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
-                    <div className={isFaqOpen ? classes.faqQuestion : classes.faqQuestionActive} onClick={() => toggleFaq()}>Why is the space station up there?</div>
-                    <p className={classes.faqQuestionAnswer} id="1">answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>Why is the space station up there?</div>
+                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1">answer</p>
                     <div className={classes.faqQuestion}>How often can I expect to see the space station?</div>
                     <p className={classes.faqQuestionAnswer}>answer</p>
                     <div className={classes.faqQuestion}>Do I need a telescope to see the space station?</div>
