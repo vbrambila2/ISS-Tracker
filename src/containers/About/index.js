@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -21,6 +22,7 @@ const useStyles = makeStyles(theme => {
         faqTitle: {
             margin: '2rem 0 2rem 0',
             fontSize: '2rem',
+            borderBottom: '0.1rem, solid, #b6b6b6'
         },
         faqQuestion: {
             margin: '0.5rem 15rem 0.5rem 0',
@@ -95,7 +97,7 @@ function About(props) {
             </div>
             <div className={classes.faq}>
                 <section>
-                    <div className={classes.faqTitle}>Frequently asked questions</div>
+                    <div className={classes.faqTitle}><QuestionAnswerIcon /> Frequently asked questions</div>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq(1)}>Why is the space station up there?</div>
                     <p className={isFaqOpen && faqId===1 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1" >{answerOne}</p>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq(2)}>How often can I expect to see the space station?</div>
