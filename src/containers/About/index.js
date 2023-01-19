@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => {
             width: '75%',
         },
         faq: {
-             margin: '2rem 2rem 0 15rem'
+             margin: '2rem 15rem 0 15rem'
         },
         faqTitle: {
             margin: '2rem 0 2rem 0',
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => {
             borderBottom: '0.1rem, solid, #b6b6b6'
         },
         faqQuestion: {
-            margin: '0.5rem 15rem 0.5rem 0',
+            margin: '0.5rem 0 0.5rem 0',
             padding: '0.8rem',
             background: '#e6e6e6',
             borderStyle: 'solid',
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => {
         },
         faqQuestionAnswer: {
             display: "none",
-            margin: '0.5rem 15rem 0.5rem 0',
+            margin: '0.5rem 0 0.5rem 0',
             padding: '0.8rem',
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => {
             borderWidth: '0.1rem'
         },
         faqQuestionAnswerActive: {
-            margin: '0.5rem 15rem 0.5rem 0',
+            margin: '0.5rem 0 0.5rem 0',
             padding: '0.8rem',
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
@@ -97,7 +97,7 @@ function About(props) {
             </div>
             <div className={classes.faq}>
                 <section>
-                    <div className={classes.faqTitle}><QuestionAnswerIcon /> Frequently asked questions</div>
+                    <div className={classes.faqTitle}><QuestionAnswerIcon /> Frequently asked questions<hr></hr></div>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq(1)}>Why is the space station up there?</div>
                     <p className={isFaqOpen && faqId===1 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1" >{answerOne}</p>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq(2)}>How often can I expect to see the space station?</div>
