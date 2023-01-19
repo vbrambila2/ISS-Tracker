@@ -14,7 +14,8 @@ class App extends Component {
     this.ToggleFaqQuestions = this.ToggleFaqQuestions.bind(this);
     this.state = {
       isMenuOpen: false,
-      isFaqOpen: false
+      isFaqOpen: false,
+      faqId: 0
     }
   };
 
@@ -22,9 +23,9 @@ class App extends Component {
     this.setState({ isMenuOpen: !this.state.isMenuOpen })
   };
 
-  ToggleFaqQuestions() {
-    this.setState({ isFaqOpen: !this.state.isFaqOpen })
-  }
+  ToggleFaqQuestions(id) {
+    this.setState({ isFaqOpen: !this.state.isFaqOpen, faqId: id })
+  };
 
   render() {
     return (
@@ -34,7 +35,7 @@ class App extends Component {
             <Routes>
                 <Route exact path="/" element={ <HomePage /> } /> 
                 <Route exact path="/iss" element={ <ISSPage /> } />
-                <Route exact path="/about" element={ <About toggleFaq={() => this.ToggleFaqQuestions()} isFaqOpen={this.state.isFaqOpen} /> } />
+                <Route exact path="/about" element={ <About toggleFaq={(id) => this.ToggleFaqQuestions(id)} isFaqOpen={this.state.isFaqOpen} faqId={this.state.faqId} /> } />
             </Routes>
         </div>
     );

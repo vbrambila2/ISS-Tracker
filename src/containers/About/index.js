@@ -52,13 +52,7 @@ const useStyles = makeStyles(theme => {
 
 function About(props) {
     const classes = useStyles(props);
-    const { toggleFaq, isFaqOpen } = props;
-
-    // const showAnswer = () => {
-    //     let visible = false;
-
-    //     //document.getElementById('1').style.display = "block";
-    // }
+    const { toggleFaq, isFaqOpen, faqId } = props;
 
     return (
         <div>
@@ -80,12 +74,12 @@ function About(props) {
             <div className={classes.faq}>
                 <section>
                     <div className={classes.faqTitle}>Frequently asked questions</div>
-                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>Why is the space station up there?</div>
-                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1">answer</p>
-                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>How often can I expect to see the space station?</div>
-                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer}>answer</p>
-                    <div className={classes.faqQuestion} onClick={() => toggleFaq()}>Do I need a telescope to see the space station?</div>
-                    <p className={isFaqOpen ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer}>answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq(1)}>Why is the space station up there?</div>
+                    <p className={isFaqOpen && faqId===1 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="1" >answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq(2)}>How often can I expect to see the space station?</div>
+                    <p className={isFaqOpen && faqId===2 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="2" >answer</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq(3)}>Do I need a telescope to see the space station?</div>
+                    <p className={isFaqOpen && faqId===3 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="3" >answer</p>
                 </section>
             </div>
         </div>
