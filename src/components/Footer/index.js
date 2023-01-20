@@ -58,7 +58,7 @@ function Footer(props) {
             <div className={classes.footerOptions} onClick={() => { aboutChange() }}>About</div>
             <div className={classes.footerOptions} onClick={() => { homeChange() }}>API</div>
         </div>
-        <div className={classes.footerCopyright} >Copyright 2022</div>
+        <div className={classes.footerCopyright} >© Copyright 2022</div>
     </div>
   );
 }
