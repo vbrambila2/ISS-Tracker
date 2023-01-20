@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => {
@@ -30,13 +31,27 @@ const useStyles = makeStyles(theme => {
 function Footer(props) {
   const classes = useStyles(props);
 
+  let navigate = useNavigate(); 
+    const homeChange = () =>{ 
+        let path = '/'; 
+        navigate(path);
+    };
+    const issChange = () =>{ 
+        let path = '/iss'; 
+        navigate(path);
+    };
+    const aboutChange = () =>{ 
+        let path = '/about'; 
+        navigate(path);
+    };
+
   return (
     <div className={classes.footer} >
         <div className={classes.footerOptions} >
-            <div>Home</div>
-            <div>ISS Map</div>
-            <div>About</div>
-            <div>API</div>
+            <div onClick={() => { homeChange() }}>Home</div>
+            <div onClick={() => { issChange() }}>ISS Map</div>
+            <div onClick={() => { aboutChange() }}>About</div>
+            <div onClick={() => { homeChange() }}>API</div>
         </div>
         <div className={classes.footerCopyright} >Copyright 2022</div>
     </div>
