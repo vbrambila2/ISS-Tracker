@@ -12,11 +12,16 @@ const useStyles = makeStyles(theme => {
         border: 'solid',
         borderWidth: '0.1rem 0 0 0',
     },
-    footerOptions: {
+    footerLinks: {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         margin: '4rem 15rem 0 15rem',
+    },
+    footerOptions: {
+        '&:hover': {
+            cursor: 'pointer'
+        }
     },
     footerCopyright: {
         display: 'flex',
@@ -47,11 +52,11 @@ function Footer(props) {
 
   return (
     <div className={classes.footer} >
-        <div className={classes.footerOptions} >
-            <div onClick={() => { homeChange() }}>Home</div>
-            <div onClick={() => { issChange() }}>ISS Map</div>
-            <div onClick={() => { aboutChange() }}>About</div>
-            <div onClick={() => { homeChange() }}>API</div>
+        <div className={classes.footerLinks} >
+            <div className={classes.footerOptions} onClick={() => { homeChange() }}>Home</div>
+            <div className={classes.footerOptions} onClick={() => { issChange() }}>ISS Map</div>
+            <div className={classes.footerOptions} onClick={() => { aboutChange() }}>About</div>
+            <div className={classes.footerOptions} onClick={() => { homeChange() }}>API</div>
         </div>
         <div className={classes.footerCopyright} >Copyright 2022</div>
     </div>
