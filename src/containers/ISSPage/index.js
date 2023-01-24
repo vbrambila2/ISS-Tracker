@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => {
             color: '#e6e6e6',
             margin: '0.5rem' 
         },
+        mapContainer: {
+            //marginBottom: '50rem'
+        }
     });
   });
 
@@ -59,10 +62,11 @@ function ISSPage(props) {
                 <section className={classes.locationContainer}>
                     <h3 className={classes.locationTextContainer}>Current Location:</h3>
                     <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
-                    <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>           
+                    <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>         
                 </section>
             </div>
             <MapContainer location={location} />
+            
         </div>
   )
 }
