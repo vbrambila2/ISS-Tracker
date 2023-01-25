@@ -36,35 +36,33 @@ const useStyles = makeStyles(theme => {
   });
 
 function ISSPage(props) {
-  const { 
-    location,
-    people,
-    getSatellite,
-    getAstros,
-  } = props;
+    const { 
+        location,
+        people,
+        getSatellite,
+        getAstros,
+    } = props;
 
-  const classes = useStyles(props);
-  
-    useEffect(() => {
-        getSatellite();
-        getAstros();
-        
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    const classes = useStyles(props);
+    
+        useEffect(() => {
+            getSatellite();
+            getAstros();
+            
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [])
 
-  return (
-        <div className={classes.issPage}>
-            <div className={classes.infoSection} >
-                <Astronauts people={people} />
-                <section className={classes.locationContainer}>
-                    <h3 className={classes.locationTextContainer}>Current Location:</h3>
-                    <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
-                    <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>         
-                </section>
-                <MapContainer location={location} />
-            </div> 
-        </div>
-  )
+    return (
+        <div className={classes.infoSection} >
+            <Astronauts people={people} />
+            <section className={classes.locationContainer}>
+                <h3 className={classes.locationTextContainer}>Current Location:</h3>
+                <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
+                <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>         
+            </section>
+            <MapContainer location={location} />
+        </div> 
+    )
 }
   
 const mapStateToProps = state => {

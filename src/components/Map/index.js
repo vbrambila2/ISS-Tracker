@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
-    width: '80%',
-    height: '70%',
+    position: 'relative',
+    width: '100rem',
+    height: '50rem'
 };
 
 export class MapContainer extends Component {
@@ -19,7 +20,7 @@ export class MapContainer extends Component {
             <Map
                 google={this.props.google}
                 zoom={5}
-                containerStyle={{ position: 'absolute', width: '100%', height: '100%' }}
+                containerStyle={{position: 'relative', paddingTop: '5rem'}}
                 style={mapStyles}
                 initialCenter={{
                     lat: location ? location.latitude : 0,
