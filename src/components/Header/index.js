@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import { ReactComponent as MenuLogo } from '../../images/menu-logo.svg';
 import SpaceLogo from '../../images/pexels-kai-pilger-1341279.jpg';
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles(() => {
   return ({
     header: {
       backgroundColor: '#d9d9d9',
@@ -27,7 +27,6 @@ const useStyles = makeStyles(theme => {
         padding: '0rem 1rem 0rem 1rem',
         position: 'relative',
         width: '81.7%',
-
         height: 70,
         zIndex: '100',
         display: 'flex',
@@ -37,11 +36,6 @@ const useStyles = makeStyles(theme => {
         backgroundPositionX: 'center',
         backgroundPositionY: 'center',
     },
-    // spaceLogo: {
-    //   width: '100%',
-    //   height: '100%',
-    //   zIndex: '-1'
-    // },
     menuLogo: {
       background: 'none',
       border: 'none',
@@ -51,7 +45,6 @@ const useStyles = makeStyles(theme => {
     },
   });
 });
-//<img src={SpaceLogo} alt="stars in space" className={classes.spaceLogo} />
 
 function Header(props) {
   const { toggleMenu, isMenuOpen } = props;
