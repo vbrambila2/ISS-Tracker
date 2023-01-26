@@ -77,6 +77,19 @@ function About(props) {
     const answerThree = `
         No, you can see the space station with your bare eyes, no equipment required
     `
+    const answerFour = `
+    The ISS circles the Earth every 90 minutes. It travels at about 17,500 miles (28,000 km) 
+    per hour, which gives the crew 16 sunrises and sunsets every day. In the more than 15 years 
+    that people have been living onboard, the Station has circumnavigated the Earth tens of 
+    thousands of times 
+    `
+    const answerFive = `
+    The space station has the volume of a five-bedroom house or two Boeing 747 jetliners. 
+    It is able to support a crew of six people, plus visitors. On Earth, the space station 
+    would weigh almost a million pounds. Measured from the edges of its solar arrays, the 
+    station covers the area of a football field including the end zones. It includes laboratory 
+    modules from the United States, Russia, Japan and Europe
+    `
 
     return (
         <div>
@@ -104,6 +117,10 @@ function About(props) {
                     <p className={isFaqOpen && faqId===2 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="2" >{answerTwo}</p>
                     <div className={classes.faqQuestion} onClick={() => toggleFaq(3)}>Do I need a telescope to see the space station?</div>
                     <p className={isFaqOpen && faqId===3 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="3" >{answerThree}</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq(4)}>How fast is the space station traveling?</div>
+                    <p className={isFaqOpen && faqId===4 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="4" >{answerFour}</p>
+                    <div className={classes.faqQuestion} onClick={() => toggleFaq(5)}>How big is the space station?</div>
+                    <p className={isFaqOpen && faqId===5 ? classes.faqQuestionAnswerActive : classes.faqQuestionAnswer} id="5" >{answerFive}</p>
                 </section>
             </div>
         </div>

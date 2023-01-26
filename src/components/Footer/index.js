@@ -6,7 +6,6 @@ const useStyles = makeStyles(theme => {
   return ({
     footer: {
         background: '#d9d9d9',
-        color: '#262626',
         marginTop: '10rem',
         padding: '2rem',
         border: 'solid',
@@ -17,6 +16,9 @@ const useStyles = makeStyles(theme => {
         justifyContent: 'space-between',
         alignItems: 'center',
         margin: '4rem 15rem 0 15rem',
+        fontSize: '0.8rem',
+        fontWeight: 'bold',
+        color: '#464646',
     },
     footerOptions: {
         '&:hover': {
