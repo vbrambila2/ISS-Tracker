@@ -32,7 +32,10 @@ const useStyles = makeStyles(theme => {
         zIndex: '100',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundImage: `url(${SpaceLogo})`,
+        backgroundPositionX: 'center',
+        backgroundPositionY: 'center',
     },
     // spaceLogo: {
     //   width: '100%',
