@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => {
     //   zIndex: '-1'
     // },
     menuLogo: {
-      backgroundColor: '#d9d9d9',
+      background: 'none',
       border: 'none',
       '&:hover': {
         cursor: 'pointer'
