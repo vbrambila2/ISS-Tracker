@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import { ReactComponent as MenuLogo } from '../../images/menu-logo.svg';
+import SpaceLogo from '../../images/pexels-kai-pilger-1341279.jpg';
 
 const useStyles = makeStyles(theme => {
   return ({
@@ -10,11 +11,14 @@ const useStyles = makeStyles(theme => {
       padding: '0rem 1rem 0rem 1rem',
       position: 'relative',
       width: '100vw',
-      height: 70,
+      height: 80,
       zIndex: '100',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
+      backgroundImage: `url(${SpaceLogo})`,
+      backgroundPositionX: 'center',
+      backgroundPositionY: 'center',
     },
     headerActive: {
         left: 352,
@@ -30,6 +34,11 @@ const useStyles = makeStyles(theme => {
         justifyContent: 'space-between',
         alignItems: 'center'
     },
+    // spaceLogo: {
+    //   width: '100%',
+    //   height: '100%',
+    //   zIndex: '-1'
+    // },
     menuLogo: {
       backgroundColor: '#d9d9d9',
       border: 'none',
@@ -39,13 +48,14 @@ const useStyles = makeStyles(theme => {
     },
   });
 });
+//<img src={SpaceLogo} alt="stars in space" className={classes.spaceLogo} />
 
 function Header(props) {
   const { toggleMenu, isMenuOpen } = props;
   const classes = useStyles(props);
 
   return (
-    <div className={ isMenuOpen ? classes.headerActive : classes.header }>
+    <div className={ isMenuOpen ? classes.headerActive : classes.header } >
       <button 
         className={classes.menuLogo}
         onClick={() => toggleMenu()}>
