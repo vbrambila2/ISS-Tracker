@@ -24,9 +24,10 @@
 }
 .homeButton {
     padding: 1rem;
-    margin: 4.5rem 0 3rem 0;
+    margin: 4.5rem 1rem 3rem 1rem;
     background-color: #e6e6e6;
     border: none;
+    border-radius: 2rem;
     color: #1a1a1a;
 }
 .homeButton:hover {
