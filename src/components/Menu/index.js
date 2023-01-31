@@ -21,13 +21,14 @@ function Menu(props) {
 
     return (
         <nav className={isMenuOpen ? 'menuBar active' : 'menuBar'} > 
+        <div className="menuTitle">ISS Tracker</div>
             <ul className="menuBarItems" >
                 <button
                     onClick={() => {
                         toggleMenu();
                         homeChange();
                     }}
-                    className="homeButton">
+                    className="menuButton">
                     Home
                 </button>
                 <button
@@ -35,7 +36,7 @@ function Menu(props) {
                         toggleMenu();
                         issChange();
                     }}
-                    className="satellitesButton">
+                    className="menuButton">
                     ISS Map
                 </button>  
                 <button
@@ -43,7 +44,7 @@ function Menu(props) {
                         toggleMenu();
                         aboutChange();
                     }}
-                    className="aboutButton">
+                    className="menuButton">
                     About
                 </button>  
              </ul>

@@ -10,7 +10,7 @@
     height: 100vh;
     padding: 0px;
     display: flex;
-    justify-content: stretch;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: -100%;
@@ -22,38 +22,28 @@
     left: 0;
     transition: 1ms; 
 }
-.homeButton {
+.menuTitle {
+    color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.menuButton {
     padding: 1rem;
-    margin: 4.5rem 1rem 3rem 1rem;
+    margin: 1rem;
     background-color: #e6e6e6;
     border: none;
     border-radius: 2rem;
     color: #1a1a1a;
+    font-weight: bold;
 }
-.homeButton:hover {
-    cursor: pointer;
-}
-.satellitesButton {
-    padding: 1rem;
-    margin: 0 0 3rem 0;
-    background-color: #e6e6e6;
-    border: none;
-    color: #1a1a1a;
-}
-.satellitesButton:hover {
-    cursor: pointer;
-}
-.aboutButton {
-    padding: 1rem;
-    background-color: #e6e6e6;
-    border: none;
-    color: #1a1a1a;
-}
-.aboutButton:hover {
+.menuButton:hover {
     cursor: pointer;
 }
 .menuBarItems {
     width: 100%; 
+    margin-top: 0.5rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
