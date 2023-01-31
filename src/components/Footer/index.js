@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => {
   return ({
     footer: {
-        background: '#d9d9d9',
+        background: '#262626',
         marginTop: '10rem',
         padding: '2rem',
         border: 'solid',
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => {
         margin: '4rem 15rem 0 15rem',
         fontSize: '0.8rem',
         fontWeight: 'bold',
-        color: '#464646',
+        color: '#d9d9d9',
     },
     footerOptions: {
         '&:hover': {
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => {
         justifyContent: 'center',
         paddingTop: '2rem',
         fontSize: '0.8rem',
-        color: '#666666'
+        color: '#d9d9d9'
     }
   });
 });
