@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => {
         padding: '0rem 1rem 0rem 1rem',
         position: 'relative',
         width: '81.7%',
-        height: 70,
+        height: 80,
         zIndex: '100',
         display: 'flex',
         justifyContent: 'space-between',
