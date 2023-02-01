@@ -22,13 +22,13 @@ const useStyles = makeStyles(theme => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: '#1a1a1a',
+            backgroundColor: '#262626',
             //borderWidth: '0.3rem',
             borderRadius: '1rem',
             //borderStyle: 'solid',
             //borderColor: '#e6e6e6',
         },
-        locationTextContainer: {
+        locationText: {
             color: '#e6e6e6',
             margin: '0.5rem' 
         },
@@ -56,9 +56,9 @@ function ISSPage(props) {
         <div className={classes.infoSection} >
             <Astronauts people={people} />
             <section className={classes.locationContainer}>
-                <h3 className={classes.locationTextContainer}>Current Location:</h3>
-                <div className={classes.locationTextContainer}>Latitude: {location ? location.latitude : 0 }</div>
-                <div className={classes.locationTextContainer}>Longitude: {location ? location.longitude : 0 }</div>         
+                <h3 className={classes.locationText}>Current Location:</h3>
+                <div className={classes.locationText}>Latitude: {location ? location.latitude : 0 }</div>
+                <div className={classes.locationText}>Longitude: {location ? location.longitude : 0 }</div>         
             </section>
             <MapContainer location={location} />
         </div> 
