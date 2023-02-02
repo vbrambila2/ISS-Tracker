@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => {
             flexDirection: 'column',
             alignItems: 'center',
             fontSize: '1.2rem',
-        }
+        },
     });
   });
 
@@ -24,7 +24,7 @@ function Astronauts(props) {
     return (
         <div className={classes.astros} >
             <h2>Astronauts currently aboard the ISS:</h2>
-            {!people ? "loading..." : astrosContainer }
+            <div>{!people ? "loading..." : astrosContainer }</div>
         </div>
     )
   }
