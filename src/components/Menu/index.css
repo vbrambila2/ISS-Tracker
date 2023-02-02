@@ -24,7 +24,7 @@
     transition: 1ms; 
 }
 .menuTitle {
-    color: #e6e6e6;
+    color: #fefefe;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
@@ -33,10 +33,10 @@
 .menuButton {
     padding: 1rem;
     margin: 1rem;
-    background-color: #e6e6e6;
+    background-color: #fefefe;
     border: none;
     border-radius: 2rem;
-    color: #1a1a1a;
+    color: #262626;
     font-weight: bold;
 }
 .menuButton:hover {
