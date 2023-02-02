@@ -5,32 +5,33 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => {
   return ({
     footer: {
-        background: '#262626',
-        marginTop: '10rem',
-        padding: '2rem',
-        border: 'solid',
-        borderWidth: '0.1rem 0 0 0',
+      background: '#262626',
+      marginTop: '10rem',
+      padding: '2rem',
+      border: 'solid',
+      borderWidth: '0.1rem 0 0 0',
     },
     footerLinks: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        margin: '4rem 15rem 0 15rem',
-        fontSize: '0.8rem',
-        fontWeight: 'bold',
-        color: '#d9d9d9',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      margin: '4rem 15rem 0 15rem',
+      fontSize: '0.8rem',
+      fontWeight: 'bold',
+        
     },
     footerOptions: {
-        '&:hover': {
-            cursor: 'pointer'
-        }
+      color: '#d9d9d9',
+      '&:hover': {
+          cursor: 'pointer'
+      }
     },
     footerCopyright: {
-        display: 'flex',
-        justifyContent: 'center',
-        paddingTop: '2rem',
-        fontSize: '0.8rem',
-        color: '#d9d9d9'
+      display: 'flex',
+      justifyContent: 'center',
+      paddingTop: '2rem',
+      fontSize: '0.8rem',
+      color: '#d9d9d9'
     }
   });
 });
@@ -56,11 +57,11 @@ function Footer(props) {
     <div className={classes.footer} >
         <div className={classes.footerLinks} >
             <div className={classes.footerOptions} onClick={() => { homeChange() }}>Home</div>
-            <div>|</div>
+            <div style={{ color: '#d9d9d9' }} >|</div>
             <div className={classes.footerOptions} onClick={() => { issChange() }}>ISS Map</div>
-            <div>|</div>
+            <div style={{ color: '#d9d9d9' }} >|</div>
             <div className={classes.footerOptions} onClick={() => { aboutChange() }}>About</div>
-            <div>|</div>
+            <div style={{ color: '#d9d9d9' }} >|</div>
             <div className={classes.footerOptions} onClick={() => { homeChange() }}>API</div>
         </div>
         <div className={classes.footerCopyright} >© Copyright 2022</div>
