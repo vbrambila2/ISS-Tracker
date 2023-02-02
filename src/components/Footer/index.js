@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => {
     },
     footerOptions: {
       color: '#d9d9d9',
+      textDecoration: 'none',
       '&:hover': {
           cursor: 'pointer'
       }
@@ -40,17 +41,17 @@ function Footer(props) {
   const classes = useStyles(props);
 
   let navigate = useNavigate(); 
-    const homeChange = () =>{ 
-        let path = '/'; 
-        navigate(path);
+    const homeChange = () => { 
+      let path = '/'; 
+      navigate(path);
     };
-    const issChange = () =>{ 
-        let path = '/iss'; 
-        navigate(path);
+    const issChange = () => { 
+      let path = '/iss'; 
+      navigate(path);
     };
-    const aboutChange = () =>{ 
-        let path = '/about'; 
-        navigate(path);
+    const aboutChange = () => { 
+      let path = '/about'; 
+      navigate(path);
     };
 
   return (
@@ -62,7 +63,7 @@ function Footer(props) {
             <div style={{ color: '#d9d9d9' }} >|</div>
             <div className={classes.footerOptions} onClick={() => { aboutChange() }}>About</div>
             <div style={{ color: '#d9d9d9' }} >|</div>
-            <div className={classes.footerOptions} onClick={() => { homeChange() }}>API</div>
+            <a href="http://api.open-notify.org/" rel="noreferrer" target="_blank" className={classes.footerOptions} >API</a>
         </div>
         <div className={classes.footerCopyright} >© Copyright 2022</div>
     </div>
