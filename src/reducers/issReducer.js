@@ -8,10 +8,10 @@ const initialState = {
 const issReducer = (state = initialState, action) => {
     switch(action.type) {
         case constants.GET_SATELLITE_LOCATION:
-            return action.payload
+            return action.payload;
         default:
-            return state
+            return state;
     }
-};
+}
 
 export default issReducer;

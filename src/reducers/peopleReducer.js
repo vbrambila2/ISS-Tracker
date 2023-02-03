@@ -8,10 +8,10 @@ const initialState = {
 const peopleReducer = (state = initialState, action) => {
     switch(action.type) {
         case constants.GET_SATELLITE_PEOPLE:
-            return action.payload
+            return action.payload;
         default:
-            return state
+            return state;
     }
-};
+}
 
 export default peopleReducer;
