@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles(() => {
   return ({
     footer: {
       background: '#262626',
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => {
       color: '#d9d9d9',
       textDecoration: 'none',
       '&:hover': {
-          cursor: 'pointer'
+        cursor: 'pointer'
       }
     },
     footerCopyright: {
@@ -41,31 +41,32 @@ function Footer(props) {
   const classes = useStyles(props);
 
   let navigate = useNavigate(); 
-    const homeChange = () => { 
-      let path = '/'; 
-      navigate(path);
-    };
-    const issChange = () => { 
-      let path = '/iss'; 
-      navigate(path);
-    };
-    const aboutChange = () => { 
-      let path = '/about'; 
-      navigate(path);
-    };
+
+  const homeChange = () => { 
+    let path = '/'; 
+    navigate(path);
+  };
+  const issChange = () => { 
+    let path = '/iss'; 
+    navigate(path);
+  };
+  const aboutChange = () => { 
+    let path = '/about'; 
+    navigate(path);
+  };
 
   return (
     <div className={classes.footer} >
-        <div className={classes.footerLinks} >
-            <div className={classes.footerOptions} onClick={() => { homeChange() }}>Home</div>
-            <div style={{ color: '#d9d9d9' }} >|</div>
-            <div className={classes.footerOptions} onClick={() => { issChange() }}>ISS Map</div>
-            <div style={{ color: '#d9d9d9' }} >|</div>
-            <div className={classes.footerOptions} onClick={() => { aboutChange() }}>About</div>
-            <div style={{ color: '#d9d9d9' }} >|</div>
-            <a href="http://api.open-notify.org/" rel="noreferrer" target="_blank" className={classes.footerOptions} >API</a>
-        </div>
-        <div className={classes.footerCopyright} >© Copyright 2022</div>
+      <div className={classes.footerLinks} >
+        <div className={classes.footerOptions} onClick={() => { homeChange() }} >Home</div>
+        <div style={{ color: '#d9d9d9' }} >|</div>
+        <div className={classes.footerOptions} onClick={() => { issChange() }} >ISS Map</div>
+        <div style={{ color: '#d9d9d9' }} >|</div>
+        <div className={classes.footerOptions} onClick={() => { aboutChange() }} >About</div>
+        <div style={{ color: '#d9d9d9' }} >|</div>
+        <a href="http://api.open-notify.org/" rel="noreferrer" target="_blank" className={classes.footerOptions} >API</a>
+      </div>
+      <div className={classes.footerCopyright} >© Copyright 2022</div>
     </div>
   );
 }

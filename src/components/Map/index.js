@@ -13,8 +13,12 @@ export class MapContainer extends Component {
         activeMarker: {},          // Shows the active marker upon click
         selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
     };
+
     render() {
-        const {google, location} = this.props;
+        const {
+            google, 
+            location
+        } = this.props;
 
         return (
             <Map

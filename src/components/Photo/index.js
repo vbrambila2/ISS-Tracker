@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles(() => {
     return ({
         nasaPhoto: {
             width: "100vw",
         }
     });
-  });
+});
 
 function NasaPhoto(props) {
     const { 
@@ -21,6 +21,6 @@ function NasaPhoto(props) {
             <img className={classes.nasaPhoto} src={photo} alt='Daily space provided by NASA' />
         </div>
     )
-  }
+}
   
-  export default NasaPhoto;
+export default NasaPhoto;

@@ -3,9 +3,13 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 
 function Menu(props) {
-    const { toggleMenu, isMenuOpen } = props;
+    const { 
+        toggleMenu, 
+        isMenuOpen 
+    } = props;
 
     let navigate = useNavigate(); 
+
     const homeChange = () =>{ 
         let path = '/'; 
         navigate(path);
@@ -21,35 +25,35 @@ function Menu(props) {
 
     return (
         <nav className={isMenuOpen ? 'menuBar active' : 'menuBar'} > 
-        <div className="menuTitle">ISS Tracker</div>
+        <div className="menuTitle" >ISS Tracker</div>
             <ul className="menuBarItems" >
                 <button
                     onClick={() => {
                         toggleMenu();
                         homeChange();
                     }}
-                    className="menuButton">
+                    className="menuButton" >
                     Home
                 </button>
                 <button
-                     onClick={() => {
+                    onClick={() => {
                         toggleMenu();
                         issChange();
                     }}
-                    className="menuButton">
+                    className="menuButton" >
                     ISS Map
                 </button>  
                 <button
-                     onClick={() => {
+                    onClick={() => {
                         toggleMenu();
                         aboutChange();
                     }}
-                    className="menuButton">
+                    className="menuButton" >
                     About
                 </button>  
              </ul>
         </nav> 
     )
-};
+}
 
 export default (Menu);

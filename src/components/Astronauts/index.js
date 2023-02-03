@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => {
             fontSize: '1.2rem',
         },
     });
-  });
+});
 
 function Astronauts(props) {
     const { 
@@ -19,7 +19,7 @@ function Astronauts(props) {
     } = props;
   
     const classes = useStyles(props);
-    const astrosContainer = people.map(astro => <div key={astro.name}>{astro.name}</div>)
+    const astrosContainer = people.map(astro => <div key={astro.name} >{astro.name}</div>)
   
     return (
         <div className={classes.astros} >
@@ -27,6 +27,6 @@ function Astronauts(props) {
             <div>{!people ? "loading..." : astrosContainer }</div>
         </div>
     )
-  }
+}
   
-  export default Astronauts;
+export default Astronauts;
