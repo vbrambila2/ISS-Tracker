@@ -11,8 +11,8 @@ export function getSatelliteLocation(location) {
 
 export function getSatellitePeople(people) {
     return {
-      type: constants.GET_SATELLITE_PEOPLE,
-      payload: people,
+        type: constants.GET_SATELLITE_PEOPLE,
+        payload: people,
     };
 }
 
@@ -31,7 +31,7 @@ export const getSatellite = () => {
                 dispatch(getSatelliteLocation(location))
             })
             .catch(err => {
-                const errMsg = err.message;
+                console.log(err.message);
             })
     }
 }
@@ -44,7 +44,7 @@ export const getAstros = () => {
                 dispatch(getSatellitePeople(people))
             })
             .catch(err => {
-                const errMsg = err.message;
+                console.log(err.message);
             })
     }
 }
@@ -57,7 +57,7 @@ export const getPhoto = () => {
                 dispatch(getNasaPhoto(photo))
             })
             .catch(err => {
-                const errMsg = err.message;
+                console.log(err.message);
             })
     }
 }
