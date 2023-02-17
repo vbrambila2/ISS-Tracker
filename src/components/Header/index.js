@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import { ReactComponent as MenuLogo } from '../../images/menu-logo.svg';
-import SpaceLogo from '../../images/pexels-kai-pilger-1341279.jpg';
+import SpaceLogo from '../../images/stars.jpg';
 
 const useStyles = makeStyles(() => {
   return ({
