@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme => {
             borderStyle: 'solid',
             borderColor: '#b6b6b6',
             borderRadius: '0.3rem',
-            borderWidth: '0.1rem'
+            borderWidth: '0.1rem',
+            '&:hover': {
+                cursor: 'pointer'
+              }
         },
         faqQuestionAnswer: {
             display: "none",
