@@ -1,20 +1,36 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import SpaceShuttle from '../../images/iss.jpeg';
+import { blue } from "@mui/material/colors";
 
 const useStyles = makeStyles(theme => {
     return ({
-        About: {
+        about: {
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
         },
+        aboutTop: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            background: `linear-gradient(to bottom, ${'#050209'} 31%, ${'#016fc9'} 100%)`
+        },
         aboutTitle: {
+            margin: '3rem 0 3rem 3rem',
+            fontSize: '3rem',
+            color: '#ffffff'
+        },
+        aboutPic: {
+            height: '30rem',
+            width: '40rem',
             margin: '3rem 0 3rem 0',
-            fontSize: '2.7rem',
         },
         aboutParagraph: {
             width: '75%',
+            marginTop: '1rem'
         },
         faq: {
              margin: '2rem 15rem 0 15rem'
@@ -100,8 +116,11 @@ function About(props) {
 
     return (
         <div>
-            <div className={classes.About} >
-                <section className={classes.aboutTitle} >About the ISS</section>
+            <div className={classes.about} >
+                <section className={classes.aboutTop}>
+                    <img src={SpaceShuttle} alt="space station floating in space" className={classes.aboutPic} />
+                    <div className={classes.aboutTitle} >About the ISS</div>   
+                </section>
                 <p className={classes.aboutParagraph} >The International Space Station is a 
                     large spacecraft in orbit around Earth. It serves as a home where crews
                     of astronauts and cosmonauts live. The space station is also a unique 
