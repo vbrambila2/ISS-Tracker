@@ -16,20 +16,22 @@ const useStyles = makeStyles(() => {
             justifyContent: 'center',
             width: '100%',
             background: `linear-gradient(to bottom, ${'#050209'} 36%, ${'#015190'} 65%)`,
+            boxShadow: '0 0.5rem 0.6rem 0.5rem #015190'
         },
         aboutTitle: {
-            margin: '3rem 0 3rem 3rem',
+            display: 'flex',
+            flexDirection: 'column',
+            width: '75%',
+            margin: '4rem 0 1rem 0',
             fontSize: '3rem',
-            color: '#ffffff',
         },
         aboutPic: {
             height: '30rem',
             width: '40rem',
-            margin: '3rem 0 3rem 0',
+            margin: '3rem 0 2rem 0',
         },
         aboutParagraph: {
             width: '75%',
-            marginTop: '1rem'
         },
         faq: {
              margin: '2rem 15rem 0 15rem'
@@ -117,9 +119,9 @@ function About(props) {
         <div>
             <div className={classes.about} >
                 <section className={classes.aboutTop}>
-                    <img src={SpaceShuttle} alt="space station floating in space" className={classes.aboutPic} />
-                    <div className={classes.aboutTitle} >About the ISS</div>   
+                    <img src={SpaceShuttle} alt="space station floating in space" className={classes.aboutPic} />     
                 </section>
+                <div className={classes.aboutTitle} >About the ISS<hr></hr></div>
                 <p className={classes.aboutParagraph} >The International Space Station is a 
                     large spacecraft in orbit around Earth. It serves as a home where crews
                     of astronauts and cosmonauts live. The space station is also a unique 
