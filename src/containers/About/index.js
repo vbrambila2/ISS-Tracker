@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import SpaceShuttle from '../../images/iss.jpeg';
-import { blue } from "@mui/material/colors";
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles(() => {
     return ({
         about: {
             display: 'flex',
@@ -16,12 +15,12 @@ const useStyles = makeStyles(theme => {
             alignItems: 'center',
             justifyContent: 'center',
             width: '100%',
-            background: `linear-gradient(to bottom, ${'#050209'} 31%, ${'#016fc9'} 100%)`
+            background: `linear-gradient(to bottom, ${'#050209'} 36%, ${'#015190'} 65%)`,
         },
         aboutTitle: {
             margin: '3rem 0 3rem 3rem',
             fontSize: '3rem',
-            color: '#ffffff'
+            color: '#ffffff',
         },
         aboutPic: {
             height: '30rem',
@@ -68,7 +67,7 @@ const useStyles = makeStyles(theme => {
             borderColor: '#b6b6b6',
             borderRadius: '0.3rem',
             borderWidth: '0.1rem'
-        }
+        },
     });
   });
 
