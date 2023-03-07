@@ -16,19 +16,19 @@ const useStyles = makeStyles(() => {
             justifyContent: 'center',
             width: '100%',
             background: `linear-gradient(to bottom, ${'#050209'} 36%, ${'#015190'} 65%)`,
-            boxShadow: '0 0.5rem 0.6rem 0.5rem #015190'
+            //boxShadow: '0 0.5rem 0.6rem 0.5rem #015190'
         },
         aboutTitle: {
-            display: 'flex',
-            flexDirection: 'column',
+            //display: 'flex',
+            //flexDirection: 'column',
             width: '75%',
             margin: '4rem 0 1rem 0',
             fontSize: '3rem',
         },
         aboutPic: {
-            height: '30rem',
-            width: '40rem',
-            margin: '3rem 0 2rem 0',
+            height: '25rem',
+            width: '35rem',
+            margin: '3rem 0 0 0',
         },
         aboutParagraph: {
             width: '75%',
@@ -119,7 +119,7 @@ function About(props) {
         <div>
             <div className={classes.about} >
                 <section className={classes.aboutTop}>
-                    <img src={SpaceShuttle} alt="space station floating in space" className={classes.aboutPic} />     
+                    <img src={SpaceShuttle} alt="space station floating in space" className={classes.aboutPic} />        
                 </section>
                 <div className={classes.aboutTitle} >About the ISS<hr></hr></div>
                 <p className={classes.aboutParagraph} >The International Space Station is a 

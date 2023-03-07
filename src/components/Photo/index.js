@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => {
     return ({
         nasaPhoto: {
-            width: "100vw",
+            width: '100vw',
         }
     });
 });
