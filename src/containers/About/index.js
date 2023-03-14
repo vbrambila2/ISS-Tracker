@@ -16,11 +16,8 @@ const useStyles = makeStyles(() => {
             justifyContent: 'center',
             width: '100%',
             background: `linear-gradient(to bottom, ${'#050209'} 36%, ${'#015190'} 65%)`,
-            //boxShadow: '0 0.5rem 0.6rem 0.5rem #015190'
         },
         aboutTitle: {
-            //display: 'flex',
-            //flexDirection: 'column',
             width: '75%',
             margin: '4rem 0 1rem 0',
             fontSize: '3rem',

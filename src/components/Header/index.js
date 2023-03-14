@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import { ReactComponent as MenuLogo } from '../../images/menu-logo.svg';
 import SpaceLogo from '../../images/stars.jpg';
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
   return ({
     header: {
       backgroundColor: '#d9d9d9',
