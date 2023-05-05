@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { getPhoto } from '../../actions';
 import NasaPhoto from '../../components/Photo';
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
   return ({
-    Home: {
+    home: {
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
@@ -44,6 +44,17 @@ const useStyles = makeStyles(() => {
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
+    },
+    [theme.breakpoints.down('sm')]: {
+      home: {
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+      },
+      appName: {
+        margin: '2rem 0 2rem 0',
+        fontSize: '2rem',
+      },
     }
   });
 });
@@ -63,7 +74,7 @@ function HomePage(props) {
   }, [])
 
     return ( 
-      <div className={classes.Home} >
+      <div className={classes.home} >
         <h1 className={classes.appName} >International Space Station Tracker</h1>
         <p className={classes.appDescription} >Follow the ISS on its journey around the globe. 
           Get real time data on it's current location and the astronauts on board.
