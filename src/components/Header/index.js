@@ -44,6 +44,14 @@ const useStyles = makeStyles((theme) => {
         cursor: 'pointer'
       }
     },
+    [theme.breakpoints.down('sm')]: {
+      header: {
+        height: 50,
+      },
+      headerActive: {
+        height: 50,
+      },
+    }
   });
 });
 

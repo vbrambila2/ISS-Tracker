@@ -47,18 +47,21 @@ const useStyles = makeStyles((theme) => {
     },
     [theme.breakpoints.down('sm')]: {
       home: {
-        //display: 'flex',
-      //alignItems: 'center',
-      //flexDirection: 'column',
-      //width: '100px'
+        textAlign: 'center'
       },
       appName: {
         fontSize: '1.5rem',
         margin: '2rem 0 2rem 0',
-        
       },
       appDescription: {
-        
+        fontSize: '1.5rem',
+      },
+      instructions: {
+        margin: '1rem',
+      },
+      potd: {
+        marginTop: '3rem',
+        textDecoration: 'underline'
       },
     }
   });
