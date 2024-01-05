@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => {
             paddingBottom: '2rem',
         },
         locationContainer: {
-            width: '100%',
+            width: '83.4%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
