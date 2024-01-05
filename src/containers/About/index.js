@@ -16,11 +16,13 @@ const useStyles = makeStyles(() => {
             justifyContent: 'center',
             width: '100%',
             background: `linear-gradient(to bottom, ${'#050209'} 36%, ${'#015190'} 65%)`,
+            boxShadow: '0rem 7.9rem #025190'
         },
         aboutTitle: {
             width: '75%',
             margin: '4rem 0 1rem 0',
             fontSize: '3rem',
+            color: '#f1f1f1'
         },
         aboutPic: {
             height: '25rem',
